@@ -61,7 +61,7 @@
   <div class="card">
     <div class="small">
       Weight: ThingSpeak Channel <strong>2429202</strong> (field1 by default)<br>
-      Weather: Historic hourly temperature & rain from Open-Meteo for the same date range<br>
+      Weather: Historic hourly temperature &amp; rain from Open-Meteo for the same date range<br>
       Location (map): <strong>-34.464397, 139.038090</strong>
     </div>
     <div id="chartContainer">
@@ -150,7 +150,7 @@
           const valueRaw = f[THINGSPEAK_FIELD_NAME];
           const value = valueRaw != null ? parseFloat(valueRaw) : null;
           if (isNaN(value)) return null;
-          return { time, value }; // assume in grams
+          return { time, value }; // grams
         })
         .filter(Boolean);
 
@@ -360,7 +360,7 @@
               type: "linear",
               position: "left",
               min: 40,
-              max: 150,
+              max: 130,
               title: {
                 display: true,
                 text: "Weight (g)"
@@ -395,7 +395,7 @@
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
-        attribution: "&copy; OpenStreetMap contributors"
+        attribution: "© OpenStreetMap contributors"
       }).addTo(map);
 
       L.marker([LAT, LON]).addTo(map).bindPopup("Barossa Valley Sensor Location");
