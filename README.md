@@ -359,7 +359,7 @@
               type: "linear",
               position: "left",
               min: 40,
-              max: 130,
+              max: 150,
               title: {
                 display: true,
                 text: "Weight (g)"
